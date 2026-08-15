@@ -2,11 +2,11 @@ name: Fork-sync
 
 permissions:
   contents: write
-  # workflows: write  # 对 GITHUB_TOKEN 无效，必须用 PAT
+  # 如果用 PAT，workflow 权限由 PAT 控制
 
 on:
   schedule:
-    - cron: "0 17 * * *"
+    - cron: "0 17 * * *"   # 北京时间凌晨 1 点
   workflow_dispatch:
 
 jobs:
@@ -19,29 +19,35 @@ jobs:
       - name: Checkout target repo
         uses: actions/checkout@v4
         with:
-          # 用 PAT 做 checkout，避免 credential 冲突
           token: ${{ secrets.PAT_TOKEN }}
-          persist-credentials: false   # 重要
+          persist-credentials: false   # 很重要，避免 credential 冲突
+          fetch-depth: 0               # 获取完整历史，减少 shallow 问题
 
       - name: Sync upstream changes
         id: sync
-        uses: aormsby/Fork-Sync-With-Upstream-action@v3.4
+        uses: aormsby/Fork-Sync-With-Upstream-action@v3.4.1   # 建议用最新小版本
         with:
           upstream_sync_repo: hafrey1/LunaTV-config
           upstream_sync_branch: main
           target_sync_branch: main
-          target_repo_token: ${{ secrets.PAT_TOKEN }}  # 改用 PAT
+          target_repo_token: ${{ secrets.PAT_TOKEN }}
+          # 允许无关历史 / 冲突时优先上游（根据需要调整）
+          upstream_pull_args: '--allow-unrelated-histories -X theirs'
           test_mode: false
 
       - name: Sync check
         if: failure()
         run: |
-          echo "[Error] 同步失败，请检查 PAT 权限或手动 Sync Fork"
+          echo "[Error] 同步失败，常见原因："
+          echo "1. 上游改了 .github/workflows → 请到仓库页面手动 Sync fork 一次"
+          echo "2. PAT_TOKEN 缺少 workflow 权限或已过期"
+          echo "3. 本地 main 与上游已分叉（建议手动解决冲突后重试）"
           exit 1
 
-      - name: Delete workflow runs
-        uses: Mattraks/delete-workflow-runs@main
+      - name: Delete old workflow runs
+        if: always()
+        uses: Mattraks/delete-workflow-runs@v2
         with:
-          retain_days: 0
+          retain_days: 3
           keep_minimum_runs: 5
-          token: ${{ secrets.PAT_TOKEN }}  # 若该 action 需要 token
+          token: ${{ secrets.PAT_TOKEN }}
