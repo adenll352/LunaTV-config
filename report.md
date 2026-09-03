@@ -1,6 +1,6 @@
 # 源接口健康检测报告
 
-最近更新时间：2026-09-03 03:37 CST
+最近更新时间：2026-09-04 01:16 CST
 
 **总源数:** 72 | **检测关键词:** 你好
 
@@ -14875,7 +14875,7 @@
     ]
   },
   {
-    "date": "2026-09-02",
+    "date": "2026-09-03",
     "keyword": "你好",
     "results": [
       {
@@ -14889,8 +14889,8 @@
         "name": "🎬豆瓣资源",
         "api": "https://caiji.dbzy5.com/api.php/provide/vod",
         "disabled": false,
-        "success": false,
-        "searchStatus": "❌"
+        "success": true,
+        "searchStatus": "无结果"
       },
       {
         "name": "🎬茅台资源",
