@@ -342,12 +342,12 @@ console.log(`Request from: ${request.headers.get('cf-connecting-ip')}`)
   
 # API 健康报告（每日自动检测API状态）
 
-## API 状态（最近更新：2026-09-19 03:25 CST）
+## API 状态（最近更新：2026-09-20 01:14 CST）
 
 - 总 API 数量：69
-- 成功 API 数量：67
-- 失败 API 数量：2
-- 平均可用率：97.0%
+- 成功 API 数量：66
+- 失败 API 数量：3
+- 平均可用率：96.9%
 - 完美可用率（100%）：60 个
 - 高可用率（80%-99%）：6 个
 - 中等可用率（50%-79%）：2 个
@@ -426,7 +426,7 @@ console.log(`Request from: ${request.headers.get('cf-connecting-ip')}`)
 | ✅ | 🔞鲨鱼资源 | [Link](https://shayuapi.com) | [Link](https://shayuapi.com/api.php/provide/vod) | ✅ | 27 | 3 | 90.0% | ❌✅✅✅✅✅✅ |
 | ✅ | 🔞细胞资源 | [Link](https://www.xxibaozyw.com) | [Link](https://www.xxibaozyw.com/api.php/provide/vod) | 无结果 | 18 | 12 | 60.0% | ✅✅✅✅✅✅✅ |
 | ✅ | 🔞香蕉资源 | [Link](https://www.xiangjiaozyw.com) | [Link](https://www.xiangjiaozyw.com/api.php/provide/vod) | ✅ | 18 | 12 | 60.0% | ✅✅✅✅✅✅✅ |
-| ✅ | 🎬飘零资源 | [Link](https://p2100.net) | [Link](https://p2100.net/api.php/provide/vod) | ✅ | 3 | 24 | 11.1% | ❌❌❌❌✅✅✅ |
+| ❌ | 🎬飘零资源 | [Link](https://p2100.net) | [Link](https://p2100.net/api.php/provide/vod) | ❌ | 2 | 25 | 7.4% | ❌❌❌❌✅✅❌ |
 <!-- API_TABLE_END -->
 
 ---
