@@ -1,6 +1,6 @@
 # 源接口健康检测报告
 
-最近更新时间：2026-09-20 03:08 CST
+最近更新时间：2026-09-21 01:14 CST
 
 **总源数:** 69 | **检测关键词:** 你好
 
@@ -9,7 +9,6 @@
 | 🚨 | 🎬百度云zy | [Link](https://bdzy1.com) | [Link](https://pz.v88.qzz.io/?url=https://api.apibdzy.com/api.php/provide/vod) | ❌ | 26 | 4 | 86.7% | ✅✅✅❌❌❌❌ |
 | 🚨 | 🎬艾旦影视 | [Link](https://lovedan.net) | [Link](https://pz.v88.qzz.io/?url=https://lovedan.net/api.php/provide/vod) | ❌ | 26 | 4 | 86.7% | ✅✅✅❌❌❌❌ |
 | ❌ | 🎬飘零资源 | [Link](https://p2100.net) | [Link](https://p2100.net/api.php/provide/vod) | ❌ | 2 | 25 | 7.4% | ❌❌❌✅✅❌❌ |
-| ❌ | 🔞黄色仓库 | [Link](https://hsckzy.xyz) | [Link](https://hsckzy.xyz/api.php/provide/vod) | ❌ | 29 | 1 | 96.7% | ✅✅✅✅✅✅❌ |
 | ✅ | 🎬-爱奇艺- | [Link](https://iqiyizyapi.com) | [Link](https://iqiyizyapi.com/api.php/provide/vod) | ✅ | 30 | 0 | 100.0% | ✅✅✅✅✅✅✅ |
 | ✅ | 🎬豆瓣资源 | [Link](https://dbzy.tv) | [Link](https://caiji.dbzy5.com/api.php/provide/vod) | 无结果 | 30 | 0 | 100.0% | ✅✅✅✅✅✅✅ |
 | ✅ | 🎬茅台资源 | [Link](https://mtzy.me) | [Link](https://caiji.maotaizy.cc/api.php/provide/vod) | 无结果 | 30 | 0 | 100.0% | ✅✅✅✅✅✅✅ |
@@ -14683,7 +14682,7 @@
     ]
   },
   {
-    "date": "2026-09-19",
+    "date": "2026-09-20",
     "keyword": "你好",
     "results": [
       {
@@ -15005,8 +15004,8 @@
         "name": "🔞黄色仓库",
         "api": "https://hsckzy.xyz/api.php/provide/vod",
         "disabled": false,
-        "success": false,
-        "searchStatus": "❌"
+        "success": true,
+        "searchStatus": "✅"
       },
       {
         "name": "🔞-大奶子-",
